@@ -29,8 +29,8 @@ const Rankings: React.FC = () => {
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-4">Rankings</h2>
-      <table className="table table-striped">
+      <h2 className="display-5 mb-4">Rankings</h2>
+      <table className="table table-striped border">
         <thead>
           <tr>
             <th>#</th>

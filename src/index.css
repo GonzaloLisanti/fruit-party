@@ -28,7 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
- background: linear-gradient(1000deg, rgb(0, 77, 70), rgb(0, 255, 242), rgb(0, 255, 221));
+  background: linear-gradient(1000deg, rgb(0, 77, 70), rgb(0, 255, 242), rgb(0, 255, 221));
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
 }

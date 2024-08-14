@@ -48,12 +48,21 @@ function App() {
           <Timer start={start} setStart={setStart} setSave={setSave} />
         </div>
         <div className="d-flex justify-content-center align-items-center mb-3">
+        { !start && !save ? (
           <button
             className="btn btn-primary me-2"
-            onClick={() => setStart(!start)}
+            onClick={() => setStart(true)}
           >
-            {start ? "Again" : "Start"}
+            Start
           </button>
+        ) : (
+          <button
+            className="btn btn-primary me-2"
+            onClick={() => location.reload()}
+          >
+            Again
+          </button>
+        )}
           {save && (
             <>
               <input
