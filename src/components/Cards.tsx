@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getFruits } from "../utils/GetFruits";
 import confetti from "canvas-confetti";
-
+import { useTranslation } from "react-i18next";
 interface CardsProps {
   start: boolean;
   scoreRef: React.MutableRefObject<number>; // Recibe scoreRef como prop
@@ -15,6 +15,7 @@ const Cards: React.FC<CardsProps> = ({ start, scoreRef }) => {
     Array(getFruits(size).length).fill(false)
   );
   const [selected, setSelected] = useState<number[]>([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setFruits(getFruits(size));
@@ -92,7 +93,7 @@ const Cards: React.FC<CardsProps> = ({ start, scoreRef }) => {
 
   return (
     <>
-      <p className="h4 mb-4">Score: {scoreRef.current}</p>
+      <p className="h4 mb-4">{t('Cards.score')} {scoreRef.current}</p>
       <div className="d-flex flex-wrap justify-content-center align-items-center">
         {fruits.map((item, index) => (
           <button

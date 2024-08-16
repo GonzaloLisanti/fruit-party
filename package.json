@@ -12,9 +12,13 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.45.1",
     "canvas-confetti": "^1.9.3",
+    "i18next": "^23.12.3",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
     "react-countdown": "^2.3.5",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-flagkit": "^2.0.4",
+    "react-i18next": "^15.0.1"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.4",

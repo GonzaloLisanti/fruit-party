@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../utils/supabaseClient";
 import Item from "./Item";
+import Instructions from "./Instructions";
+import { useTranslation } from "react-i18next";
 
 interface RankingItem {
   id: number;
@@ -10,6 +12,7 @@ interface RankingItem {
 
 const Rankings: React.FC = () => {
   const [ranking, setRanking] = useState<RankingItem[]>([]);
+  const { t } = useTranslation();
 
   const callSupaBase = async () => {
     const { data } = await supabase
@@ -20,7 +23,6 @@ const Rankings: React.FC = () => {
     if (data) {
       setRanking(data);
     }
-    console.log(data);
   };
 
   useEffect(() => {
@@ -29,13 +31,19 @@ const Rankings: React.FC = () => {
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-4">Rankings</h2>
-      <table className="table table-striped">
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h2 className="display-5 text-center flex-grow-1">{t('Rankings.rankings_title')}</h2>
+        <div className="ms-3">
+          <Instructions />
+        </div>
+      </div>
+  
+      <table className="table table-striped border">
         <thead>
           <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>Score</th>
+            <th>{t('Rankings.name')}</th>
+            <th>{t('Rankings.score')}</th>
           </tr>
         </thead>
         <tbody>
@@ -46,6 +54,7 @@ const Rankings: React.FC = () => {
       </table>
     </div>
   );
+  
 };
 
 export default Rankings;
