@@ -1,5 +1,11 @@
 # Fruit Party
 
+## [Play the Game Here!](https://fruit-party.vercel.app/)
+
+Click the link above to play Fruit Party online.
+
+---
+
 ## Project Overview
 
 Fruit Party is a classic memory game where you match pairs of identical images to earn points and advance to the next level. The game starts with three types of fruits and adds two more types with each level until a maximum of nine fruit types is reached.
