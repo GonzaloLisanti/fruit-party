@@ -1,0 +1,41 @@
+{
+  "App": {
+    "title": "Fruit Party",
+    "start": "Start",
+    "again": "Again",
+    "save": "Save",
+    "name_exists": "The name already exists.",
+    "alert_warning": "Warning",
+    "rankings": "Rankings",
+    "score": "Score",
+    "name": "Name",
+    "rankings_title": "Rankings"
+  },
+  "Cards": {
+    "score": "Score:"
+  },
+  "Rankings": {
+    "rankings_title": "Rankings",
+    "instructions": "Instructions",
+    "position": "#",
+    "name": "Name",
+    "score": "Score"
+  },
+  "Timer": {
+    "seconds": "Seconds"
+  },
+  "Instructions": {
+    "how_to_play": "How to Play",
+    "scoring_system": "Scoring System",
+    "tooltip_game_instructions": "Classic memory game where you match two identical images to earn points and progress to the next level.",
+    "tooltip_game_progress": "Initially, there are 3 types of fruits. As you progress, 2 more types are added with each level.",
+    "tooltip_game_save": "After the time has passed, you can save the score with a name.",
+    "tooltip_scoring": "Scoring:",
+    "scoring_conditions": [
+      "If you match all the cards with the exact number of moves, you'll earn double the number of cards plus a level bonus.",
+      "If you complete the game with fewer than 5 extra moves, you'll get the number of cards plus a level bonus.",
+      "If you finish the game with between 5 and 10 extra moves, you'll earn half the number of cards plus a level bonus.",
+      "If you complete the game with more than 10 extra moves, you'll receive one-third of the number of cards, rounded, plus a level bonus."
+    ]
+  }
+}

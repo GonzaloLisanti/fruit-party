@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Countdown, { CountdownApi } from "react-countdown";
-
+import { useTranslation } from "react-i18next";
 interface TimerProps {
   start: boolean;
   setStart: React.Dispatch<React.SetStateAction<boolean>>;
@@ -9,14 +9,18 @@ interface TimerProps {
 
 const Timer: React.FC<TimerProps> = ({ start, setStart, setSave }) => {
   const timerRef = useRef<CountdownApi | null>(null);
+  const [finished, setFinished] = useState(false);
+  const { t } = useTranslation();
 
   const handleFinish = () => {
+    setFinished(true);
     setStart(false); // Detiene el juego cuando el tiempo se acaba
     setSave(true);
   };
 
   useEffect(() => {
     if (start && timerRef.current) {
+      setFinished(false);
       timerRef.current.start();
     }
   }, [start]);
@@ -26,7 +30,9 @@ const Timer: React.FC<TimerProps> = ({ start, setStart, setSave }) => {
       <h3>
         <Countdown
           date={Date.now() + 59000} // Temporizador de 60 segundos
-          renderer={(props) => <span>{!start ? 60 : props.seconds} </span>}
+          renderer={(props) => (
+            <span>{!finished && !start ? 60 : props.seconds + 1} </span>
+          )}
           onComplete={handleFinish}
           autoStart={false}
           ref={(ref) => {
@@ -35,7 +41,7 @@ const Timer: React.FC<TimerProps> = ({ start, setStart, setSave }) => {
             }
           }}
         />
-        Sec
+        {t("Timer.seconds")}
       </h3>
     </div>
   );

@@ -1,0 +1,41 @@
+{
+  "App": {
+    "title": "Fruit Party",
+    "start": "Comenzar",
+    "again": "Otra vez",
+    "save": "Guardar",
+    "name_exists": "El nombre ya existe.",
+    "alert_warning": "Advertencia",
+    "rankings": "Clasificaciones",
+    "score": "Puntuación",
+    "name": "Nombre",
+    "rankings_title": "Clasificaciones"
+  },
+  "Cards": {
+    "score": "Puntuación:"
+  },
+  "Rankings": {
+    "rankings_title": "Clasificaciones",
+    "instructions": "Instrucciones",
+    "position": "#",
+    "name": "Nombre",
+    "score": "Puntuación"
+  },
+  "Timer": {
+    "seconds": "Segundos"
+  },
+  "Instructions": {
+    "how_to_play": "Cómo Jugar",
+    "scoring_system": "Puntuación",
+    "tooltip_game_instructions": "Juego clásico de memoria donde debes emparejar dos imágenes idénticas para ganar puntos y avanzar al siguiente nivel.",
+    "tooltip_game_progress": "Inicialmente, hay 3 tipos de frutas. A medida que avanzas, se añaden 2 tipos más con cada nivel hasta un maximo de 9 frutas.",
+    "tooltip_game_save": "Luego de haber pasado el tiempo se podrá guardar la puntuación con un nombre.",
+    "tooltip_scoring": "Puntuación:",
+    "scoring_conditions": [
+      "Si emparejas todas las cartas en el número exacto de movimientos, obtendrás el doble del número de cartas más un bono según el nivel.",
+      "Si completas el juego con menos de 5 movimientos extra, recibirás el número de cartas más un bono según el nivel.",
+      "Si completas el juego con entre 5 y 10 movimientos extra, obtendrás la mitad del número de cartas más un bono según el nivel.",
+      "Si completas el juego con más de 10 movimientos extra, recibirás un tercio del número de cartas, redondeado, más un bono según el nivel."
+    ]
+  }
+}
