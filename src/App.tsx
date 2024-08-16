@@ -12,7 +12,7 @@ function App() {
   const [save, setSave] = useState(false);
   const [name, setName] = useState("");
   const [warning, setWarning] = useState<string | null>(null);
-  const score = useRef(0); // Mantener el puntaje actual aquí
+  const score = useRef(0);
   const [error, setError] = useState(false);
   const { t, i18n } = useTranslation();
 
@@ -65,7 +65,7 @@ function App() {
 
       <div className="bg-white rounded p-3 mb-4 border shadow-sm w-100 w-md-75 w-lg-50">
         <div
-          className="rounded mb-2 p-1 mx-auto border border-dark w-25"
+          className="rounded mb-2 p-1 mx-auto border border-dark"
           style={{ backgroundColor: "#4fffb2" }}
         >
           <Timer start={start} setStart={setStart} setSave={setSave} />
@@ -111,7 +111,7 @@ function App() {
             {warning}
           </div>
         )}
-        <Cards start={start} scoreRef={score} /> {/* Pasar scoreRef a Cards */}
+        <Cards start={start} scoreRef={score} />
       </div>
 
       <div className="bg-white rounded p-3 mb-4 border shadow-sm w-100 w-md-75 w-lg-50">

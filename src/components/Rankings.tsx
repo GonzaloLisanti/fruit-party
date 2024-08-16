@@ -31,30 +31,35 @@ const Rankings: React.FC = () => {
 
   return (
     <div className="container mt-4">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2 className="display-5 text-center flex-grow-1">{t('Rankings.rankings_title')}</h2>
-        <div className="ms-3">
-          <Instructions />
-        </div>
+      <div className="d-flex justify-content-between align-items-center mb-2">
+        <h2 className="display-5 text-center flex-grow-1">
+          {t("Rankings.rankings_title")}
+        </h2>
       </div>
-  
+      <div className="ms-3">
+        <Instructions />
+      </div>
       <table className="table table-striped border">
         <thead>
           <tr>
             <th>#</th>
-            <th>{t('Rankings.name')}</th>
-            <th>{t('Rankings.score')}</th>
+            <th>{t("Rankings.name")}</th>
+            <th>{t("Rankings.score")}</th>
           </tr>
         </thead>
         <tbody>
           {ranking.map((item, index) => (
-            <Item key={item.id} name={item.name} score={item.score} index={index} />
+            <Item
+              key={item.id}
+              name={item.name}
+              score={item.score}
+              index={index}
+            />
           ))}
         </tbody>
       </table>
     </div>
   );
-  
 };
 
 export default Rankings;
